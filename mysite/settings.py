@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=+gi34fm9k_73e1m)(x=5%(wcww2fv51^^!tsup6^)&#q2q64!
 DEBUG = True
 
 # site will be deployed to https://pythonanywhere.com/
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog'
 ]
 
 MIDDLEWARE = [
