@@ -3,6 +3,11 @@
 {% block content %}
     <h1><a href="/">Blog posts</a></h1>
     <div class="posts__container">
+        <h2>
+            <a href="{% url 'post_new' %}">
+                + Add a new post
+            </a>
+        </h2>
         <ul>
             {% for post in posts %}
                 <li>{{post}}</li>
@@ -11,7 +16,9 @@
         <div>
         {% for post in posts %}
             <article>
-                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+                <h2>
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
+                </h2>
                 <div>{{post.text}}</div>
                 <div>published: {{post.published_date}}</div>
             </article>
