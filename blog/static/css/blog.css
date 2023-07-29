@@ -32,3 +32,8 @@ h2 a {
 .posts__container {
     margin-left: 18px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
