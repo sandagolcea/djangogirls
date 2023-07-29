@@ -1,0 +1,44 @@
+django.contrib
+    - admin
+    - auth => models => User
+django.urls
+    - path
+django.utils
+    - timezone
+django.conf
+    - settings => settings.AUTH_USER_MODEL (used in model)
+django.shortcuts
+    - render => used in views to render a template
+
+# SHELL
+python manage.py shell
+
+# Get the user for the post
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+>>> me = User.objects.get(username='sanda')
+
+# Create a new post
+>>> from blog.models import Post
+>>> Post.objects.create(author=me, title='Sample title', text='Test')
+
+# Filter posts
+>>> Post.objects.filter(author=me)
+>>> Post.objects.filter(title__contains='title')
+
+# Filter posts by time:
+>>> from django.utils import timezone
+>>> Post.objects.filter(published_date__lte=timezone.now())
+
+# get and publish a post (see blog/models.py/publish)
+post = Post.objects.get(title="Sample title")
+post.publish()
+
+# order posts
+>>> Post.objects.order_by('created_date')
+>>> Post.objects.order_by('-created_date') # other way around
+# chaining is supported
+>>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+
+# exit shell
+>>> exit()
