@@ -1,0 +1,32 @@
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    height: 75px;
+    justify-content: center;
+    display: flex;
+    background-color: orangered;
+}
+
+h1 a {
+    font-family: fantasy;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+h2 a {
+    font-family: ui-monospace;
+    text-decoration: none;
+    color: orangered;
+}
+
+.posts__container {
+    margin-left: 18px;
+}
