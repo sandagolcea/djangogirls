@@ -2,6 +2,7 @@
 ## App from Django Girls
 
 Django girls walkthrough of a simple blog post application.
+Tutorial can be found [here](https://tutorial.djangogirls.org/en)
 
 ### To start this app:
   - Activate virtual env:
