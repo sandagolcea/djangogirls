@@ -14,17 +14,19 @@ h1 {
     background-color: orangered;
 }
 
+a {
+    text-decoration: none;
+    color: orangered;
+}
+
 h1 a {
     font-family: fantasy;
-    text-decoration: none;
     padding: 15px;
     color: white;
 }
 
 h2 a {
     font-family: ui-monospace;
-    text-decoration: none;
-    color: orangered;
 }
 
 .posts__container {

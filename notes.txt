@@ -9,6 +9,8 @@ django.conf
     - settings => settings.AUTH_USER_MODEL (used in model)
 django.shortcuts
     - render => used in views to render a template
+    - redirect
+django.forms
 
 # SHELL
 python manage.py shell
