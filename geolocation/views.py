@@ -1,6 +1,10 @@
 from django.shortcuts import render
+import requests
 
-# Create your views here.
 def geolocation(request):
-    # request, html name, any params {}
-    return render(request, 'geolocation.html', {})
+    response = requests.get('http://www.geoplugin.net/json.gp')
+    data = response.json()
+    return render(request, 'geolocation.html', {
+        'city': data['geoplugin_city'],
+        'country': data['geoplugin_countryName']
+    })
