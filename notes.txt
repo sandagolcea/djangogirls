@@ -1,3 +1,6 @@
+To create a new sub-app:
+`$ python manage.py startapp blog`
+
 django.contrib
     - admin
     - auth => models => User
